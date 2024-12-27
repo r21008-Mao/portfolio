@@ -1,56 +1,88 @@
+/* 基本的なスタイル設定 */
 body {
-  display: flex; /* 画面全体の配置を調整するための設定 */
-  justify-content: center; /* コンテンツを中央に配置 */
-  padding: 0px 10px; /* 画面の上下に 0px の余白、左右に10pxの余白を設定 */
+  /* フォントファミリを設定し、ページ全体のマージンとパディングをリセット */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  /* 背景色を淡いグレーに設定 */
+  background-color: #f5f5f5;
+  /* 横にスライドしなくてもいいように、全体の幅を設定 */
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.header {
+  /* ヘッダーの背景色を濃い灰色に設定し、文字色を白に */
+  background-color: #333;
+  color: white;
+  /* テキストを中央揃えにして、上下にパディングを追加 */
+  text-align: center;
+  padding: 1em 0;
 }
 
 .container {
-  max-width: 768px; /* コンテンツの最大幅を768pxに制限 */
-  width: 100%; /* コンテンツが幅いっぱいに広がるように設定 */
-  margin: 0 auto; /* コンテンツを中央に配置 */
-}
-
-img {
-  display: block; /* 画像をブロック要素に設定 */
-  margin: 0 auto; /* 画像を中央に配置　 */
-  border-radius: 10px; /* 画像の角を丸く設定 */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* ドロップシャドウを設定 */
-}
-
-.img-2col-container {
-  display: flex;
-  gap: 20px;
-  margin: 20px 0;
-  min-height: 300px; /* コンテナ全体の最小の高さを設定 */
-}
-
-.img-2col-container > div {
-  flex: 1;
-  display: flex; /* Flexboxを使用して画像を中央配置 */
-  align-items: center; /* 垂直方向の中央揃え */
-  justify-content: center; /* 水平方向の中央揃え */
-}
-
-.img-2col-container img {
+  /* コンテンツ幅を100%にし、最大幅を1200pxに設定して中央揃えにする */
   width: 100%;
-  height: 300px; /* 画像の高さを固定 */
-  object-fit: cover; /* アスペクト比を維持しつつ、指定サイズに収める */
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  max-width: 1200px;
+  margin: 0 auto;
+  /* 上下にパディングを追加 */
+  padding: 2em 1em;
 }
 
-/* レスポンシブ対応 */
-@media (max-width: 600px) {
-  .img-2col-container {
-    flex-direction: column;
-    min-height: auto;
+.card {
+  /* カードの背景色を白にし、角を丸める */
+  background-color: white;
+  border-radius: 8px;
+  /* カードに影をつける */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* カード間のマージンと内部のパディングを設定 */
+  margin-bottom: 2em;
+  padding: 1em;
+}
+
+.card h2 {
+  /* 見出しの上のマージンをリセット */
+  margin-top: 0;
+}
+
+.footer {
+  /* フッターの背景色を濃い灰色にし、文字色を白に */
+  background-color: #333;
+  color: white;
+  /* テキストを中央揃えにして、上下にパディングを追加 */
+  text-align: center;
+  padding: 1em 0;
+  /* フッターを相対的に配置し、幅を100%に設定、ページ下部に配置 */
+  position: relative;
+  width: 100%;
+  bottom: 0;
+}
+
+/* 画像の中央揃えスタイル */ 
+.centered-image {
+    display: block; 
+    margin: 0 auto; 
+    max-width: 50%; 
+    height: auto;
+}
+
+/* 動画の中央揃えスタイル */
+ .centered-video { 
+   display: block;
+   margin: 1em auto; /* 上下に少しのマージンを追加 */ 
+   max-width: 75%; 
+   height: auto;
+ }
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+  .container {
+      /* 画面が狭い場合、コンテナのパディングを少なくする */
+      padding: 1em;
   }
 
-  .img-2col-container > div {
-    width: 100%;
-  }
-
-  .img-2col-container img {
-    height: 250px; /* モバイル表示時は少し小さく */
+  .card {
+      /* 画面が狭い場合、カード間のマージンを小さくする */
+      margin-bottom: 1em;
   }
 }
