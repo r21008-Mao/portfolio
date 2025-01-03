@@ -45,6 +45,58 @@ body {
   margin-top: 0;
 }
 
+.project {
+  background-color: #ffffff;  /* 背景色を白に設定 */
+  border: 1px solid #e0e0e0;  /* 薄いグレーの境界線を追加 */
+  border-radius: 8px;         /* 角を丸める */
+  padding: 20px;              /* 内部の余白を追加 */
+  margin-bottom: 20px;        /* 下部のマージンを追加 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 軽いシャドウを追加 */
+}
+
+.project h3 {
+  color: #333;                /* 見出しの文字色を濃い灰色に */
+  font-size: 1.5em;           /* フォントサイズを少し大きく */
+  margin-top: 0;              /* 上部のマージンをリセット */
+}
+
+.project p {
+  color: #666;                /* 段落の文字色を薄い灰色に */
+  line-height: 1.6;           /* 行間を少し広く */
+  margin-bottom: 10px;        /* 下部のマージンを追加 */
+}
+
+.arm {
+  background-color: #ffffff;  /* 背景色を白に設定 */
+  border: 1px solid #e0e0e0;  /* 薄いグレーの境界線を追加 */
+  border-radius: 8px;         /* 角を丸める */
+  padding: 20px;              /* 内部の余白を追加 */
+  margin-bottom: 20px;        /* 下部のマージンを追加 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 軽いシャドウを追加 */
+}
+
+
+
+.music {
+  background-color: #ffffff;  /* 背景色を白に設定 */
+  border: 1px solid #e0e0e0;  /* 薄いグレーの境界線を追加 */
+  border-radius: 8px;         /* 角を丸める */
+  padding: 20px;              /* 内部の余白を追加 */
+  margin-bottom: 20px;        /* 下部のマージンを追加 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 軽いシャドウを追加 */
+}
+
+
+.microbit {
+  background-color: #ffffff;  /* 背景色を白に設定 */
+  border: 1px solid #e0e0e0;  /* 薄いグレーの境界線を追加 */
+  border-radius: 8px;         /* 角を丸める */
+  padding: 20px;              /* 内部の余白を追加 */
+  margin-bottom: 20px;        /* 下部のマージンを追加 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 軽いシャドウを追加 */
+}
+
+
 .footer {
   /* フッターの背景色を濃い灰色にし、文字色を白に */
   background-color: #333;
@@ -59,15 +111,40 @@ body {
 }
 
 /* 画像の中央揃えスタイル */ 
-.centered-image {
+
+.wheel-image {
+  display: block; 
+  margin: 0 auto; 
+  max-width: 50%; 
+  height: auto;
+}
+
+/* 画像の中央揃えスタイル */ 
+.arm-image {
     display: block; 
     margin: 0 auto; 
     max-width: 50%; 
     height: auto;
 }
 
+.microbit-image {
+  display: block; 
+  margin: 0 auto; 
+  max-width: 50%; 
+  height: auto;
+}
+
+
 /* 動画の中央揃えスタイル */
- .centered-video { 
+ .servo-video { 
+   display: block;
+   margin: 1em auto; /* 上下に少しのマージンを追加 */ 
+   max-width: 75%; 
+   height: auto;
+ }
+
+/* 動画の中央揃えスタイル */
+ .music-video { 
    display: block;
    margin: 1em auto; /* 上下に少しのマージンを追加 */ 
    max-width: 75%; 
@@ -86,3 +163,12 @@ body {
       margin-bottom: 1em;
   }
 }
+
+/* スキルカードのスタイル */
+.skill {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+

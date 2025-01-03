@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
+ <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ポートフォリオ</title>
     <link rel="stylesheet" href="main.css"> <!-- CSSファイルのリンク -->
-</head>
-<body>
-    <header class="header">
+ </head>
+    <body>
+     <header class="header">
         <h1>私のポートフォリオ</h1>
-    </header>
+     </header>
 
-    <main class="container">
+     <main class="container">
         <section class="card">
             <h2>自己紹介</h2>
             <p>こんにちは！私は大阪高専の4年生でメカトロ系を専攻しています。</p>
@@ -19,31 +19,85 @@
 
         <section class="card">
             <h2>作品一覧</h2>
-            <ul>
-                <li>作品1: [モータ付きの二輪ロボット]</li>
-                <p>この作品は３年次に設計したものになります。使用したソフトはfusion360。タイヤのホイールの形などを自分で決め設計した。</p>
+            <div class="project">
+            
+                <h3>作品1 「モータ付きの二輪ロボット」</h3>
+                <p>
+                  
+                  この作品は３年次に設計したものになります。
+                  使用したソフトはfusion360。
+                  タイヤのホイールの形などを自分で決め設計した。
                 
-                <img src="wheel-robot.jpg" alt="[wheel-robot]" class="centered-image">
+                </p>
                 
-                <li>作品2</li>
-                <p></p>
+                <img src="wheel-robot.jpg" alt="wheel-robot" class="wheel-image">
+                
+           </div>
 
-                <video src="無題の動画.mp4" alt="サーボモータ" class="centered-video" controls autoplay muted loop>
+           <div class="project">
+                <h3>作品2「サーボモータ」</h3>
+                <p>
+                
+                  この作品は３年次に設計したものになります。
+                  使用したソフトはfusion360。
+                  サーボモータにアームを取り付けて、
+                  複数のリンクとギア連動して動くことでものをつかんだり反したりする動作をする。
+                
+                </p>
 
-               <li>プロジェクト3</li>
-                <p>[プロジェクトの簡単な説明]</p>
-            </ul>
+                <video src="無題の動画.mp4" alt="サーボモータ" class="servo-video" controls autoplay muted loop>
+
+            </div>
+            
+            <div class="project">
+                <h3>作品3「基礎研究」</h3>
+                <div class="arm">
+                 <p>
+                  これは4年次に取り組んだ課題です。
+                  「身体が不自由な人たちが利用のしやすいお寿司屋さん」をコンセプトに4人で製作に取り掛かりました。
+                  ロボットのアームはシンプルで、UFOキャッチャーのようなハンドを作成した。
+
+                  <img src="基礎研アーム1.png" alt="アームの寸法図" class="arm-image">
+                  
+                  <img src="基礎研アーム2.png" alt="アームの寸法図" class="arm-image">
+                 </p>
+                </div>
+
+                <div class="music">
+                 <p>
+                    音声認識を用いて、アームの動作を制御しました。
+                    teachable machineという機械学習モデルを作成できる
+                    ウェブベースのツールを使用し、音声認識のプログラムを作成した。
+                    音声データを5つ作成し、各音声データごとにアームの動きをつけました。
+                    <video src="音声.mp4" alt="音声" class="music-video" controls autoplay loop>
+
+                 </p>
+                </div>
+
+
+                <div class="microbit">
+                 <p>
+                    マイコンには、micro:bitを使いました。
+                    micro:bitには以下のような動作をさせました。
+                    <img src="microbit-画面コピー.png" alt="microbit" class="microbit-image">
+                 </p>
+                </div>
+                
+            </div>
         </section>
 
         <section class="card">
             <h2>スキル</h2>
-            <p>以下のスキルを持っています：</p>
-            <ul>
-                <li>プログラミング言語: Python, Java, C++</li>
-                <li>ツール: Git, Docker, Jenkins</li>
-                <li>その他: データ解析, 機械学習</li>
-            </ul>
+            <div class="skill">
+               <ul>
+                 <li>プログラミング言語(期間) : python(1年程)、C言語(2年程)、Arduino言語(2年程)</li>
+                 <li>工作機械 : 卓上旋盤、卓上ボール盤、レーザーカッタ、3Dプリンタ（学校授業程度）</li>
+                 <li>ソフトウェア : KiCad、Creo、Fusion360、tinkercad、teachable machine、Word、Excel、PowerPoint(学校授業程度)</li>
+                 <li>マイコン : Raspberry Pi、micro:bit、Arduino Uno(学校授業程度)</li>
+               </ul>
+            </div>
         </section>
+        
 
         <section class="card">
             <h2>連絡先</h2>
@@ -51,25 +105,29 @@
             <p>電話: [あなたの電話番号]</p>
             <p>LinkedIn: [あなたのLinkedInプロフィール]</p>
         </section>
-    </main>
+     </main>
 
-    <footer class="footer">
+     <footer class="footer">
         <p>&copy; 2024 [池田優央] All rights reserved.</p>
-    </footer>
-    <script> 
-       // Intersection Observer APIを使用してビデオの表示状態を監視 
-       const video = document.getElementById('project1-video'); 
-       const observer = new IntersectionObserver((entries) => {
-         entries.forEach(entry => { 
-          if (entry.isIntersecting) {
-             video.play(); // 要素がビューポートに表示されたら再生 
-           } else { 
-            video.pause(); // 要素がビューポートから外れたら停止 
-          } });
-         }, { 
-          threshold: 0.5 // 要素が50%以上表示されている場合に発火 
-       }); 
-       // ビデオ要素を監視対象として追加 
-       observer.observe(video);
+     </footer>
+
+    <script>
+        // Intersection Observer APIを使用してビデオの表示状態を監視
+        const video = document.getElementById('project1-video');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    video.play();  // 要素がビューポートに表示されたら再生
+                } else {
+                    video.pause(); // 要素がビューポートから外れたら停止
+                }
+            });
+        }, {
+            threshold: 0.5 // 要素が50%以上表示されている場合に発火
+        });
+
+        // ビデオ要素を監視対象として追加
+        observer.observe(video);
+    </script>
 </body>
 </html>
